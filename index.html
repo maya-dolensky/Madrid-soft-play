@@ -10,27 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./styles.css">
-  <script>
-    // Detectar basePath y corregir rutas dinámicamente para GitHub Pages
-    (function() {
-      const path = window.location.pathname;
-      const match = path.match(/^\/([^\/]+)\//);
-      let basePath = '';
-      if (match && match[1] && !['index.html', 'styles.css', 'script.js', 'public'].includes(match[1])) {
-        basePath = '/' + match[1];
-      }
-      
-      // Corregir ruta de CSS
-      const link = document.querySelector('link[href="./styles.css"]');
-      if (link) link.href = basePath + '/styles.css';
-      
-      // Corregir rutas de imágenes
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        const originalSrc = img.getAttribute('data-src');
-        img.src = basePath + originalSrc;
-      });
-    })();
-  </script>
+
 </head>
 <body class="font-sans antialiased">
   <!-- Navbar -->
