@@ -86,7 +86,14 @@ ${message ? `- Mensaje adicional: ${message}` : ''}
       body: JSON.stringify(contactData)
     });
 
-    const brevoResult = await brevoResponse.json();
+    let brevoResult;
+    try {
+      brevoResult = await brevoResponse.json();
+    } catch (e) {
+      const text = await brevoResponse.text();
+      console.error('Brevo response not JSON:', text);
+      brevoResult = { code: 'unknown', message: text };
+    }
 
     if (!brevoResponse.ok) {
       // Si el contacto ya existe, Brevo devuelve 400, pero eso está bien
@@ -107,7 +114,12 @@ ${message ? `- Mensaje adicional: ${message}` : ''}
           });
 
           if (!updateResponse.ok) {
-            const updateError = await updateResponse.json();
+            let updateError;
+            try {
+              updateError = await updateResponse.json();
+            } catch (e) {
+              updateError = { message: await updateResponse.text() };
+            }
             console.error('Error updating contact:', updateError);
             throw new Error('Error updating contact in Brevo');
           }
