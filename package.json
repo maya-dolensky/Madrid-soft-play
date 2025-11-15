@@ -1,0 +1,10 @@
+{
+  "name": "madrid-soft-play",
+  "version": "1.0.0",
+  "description": "Sitio web estático para Madrid Soft Play",
+  "private": true,
+  "engines": {
+    "node": "18.x"
+  }
+}
+

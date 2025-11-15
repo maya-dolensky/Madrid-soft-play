@@ -1,4 +1,7 @@
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
+  // Log para debugging
+  console.log('Function called:', req.method, req.url);
+  
   // Configurar CORS primero
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -11,6 +14,7 @@ module.exports = async (req, res) => {
 
   // Solo permitir POST después de manejar OPTIONS
   if (req.method !== 'POST') {
+    console.log('Method not allowed:', req.method);
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -40,7 +44,6 @@ module.exports = async (req, res) => {
     }
 
     // Preparar datos para Brevo
-    // Dividir el nombre en firstName y lastName si es posible
     const nameParts = name.trim().split(' ');
     const firstName = nameParts[0] || '';
     const lastName = nameParts.slice(1).join(' ') || '';
@@ -58,10 +61,10 @@ module.exports = async (req, res) => {
         MENSAJE: message || ''
       },
       listIds: [parseInt(listId, 10)],
-      updateEnabled: true // Actualizar contacto si ya existe
+      updateEnabled: true
     };
 
-    // Llamar a la API de Brevo para crear/actualizar contacto
+    // Llamar a la API de Brevo
     const brevoResponse = await fetch('https://api.brevo.com/v3/contacts', {
       method: 'POST',
       headers: {
@@ -82,7 +85,6 @@ module.exports = async (req, res) => {
     }
 
     if (!brevoResponse.ok) {
-      // Si el contacto ya existe, Brevo devuelve 400, pero eso está bien
       if (brevoResponse.status === 400 && brevoResult.code === 'duplicate_parameter') {
         // El contacto ya existe, intentar actualizarlo
         try {
@@ -135,4 +137,4 @@ module.exports = async (req, res) => {
       error: 'Internal server error. Please try again later.' 
     });
   }
-};
+}
