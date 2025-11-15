@@ -127,7 +127,7 @@ async function handleFormSubmit(event) {
     
     const result = await response.json();
     
-    if (!response.ok) {
+    if (!response.ok || !result.success) {
       throw new Error(result.error || 'Error al enviar el formulario');
     }
     
