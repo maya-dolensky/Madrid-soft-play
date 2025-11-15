@@ -108,8 +108,8 @@ async function handleFormSubmit(event) {
   submitBtn.textContent = 'Enviando...';
   
   try {
-    // Llamar a la función serverless de Netlify que se conecta con Brevo
-    const response = await fetch('/.netlify/functions/brevo', {
+    // Llamar a la función serverless de Vercel que se conecta con Brevo
+    const response = await fetch('/api/brevo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

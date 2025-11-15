@@ -9,10 +9,10 @@ Tu proyecto Next.js ha sido convertido exitosamente a un sitio web estático HTM
 1. **index.html** - Página principal con todo el contenido
 2. **styles.css** - Estilos personalizados
 3. **script.js** - Funcionalidad JavaScript (navegación, formulario, acordeón)
-4. **README-STATIC.md** - Documentación completa
-5. **package-static.json** - Package.json simplificado (opcional)
-6. **.htaccess** - Configuración para Apache (opcional)
-7. **netlify.toml** - Configuración para Netlify (opcional)
+4. **api/brevo.js** - Función serverless para formulario (Brevo)
+5. **vercel.json** - Configuración de Vercel
+6. **README-STATIC.md** - Documentación completa
+7. **package-static.json** - Package.json simplificado (opcional)
 
 ## 🚀 Cómo Usar
 
@@ -40,10 +40,22 @@ Luego visita: `http://localhost:8000`
 3. Selecciona la rama `main` y carpeta `/ (root)`
 4. Tu sitio estará en: `https://tu-usuario.github.io/tu-repositorio`
 
-### Opción 3: Despliegue en Netlify
+### Opción 3: Despliegue en Vercel (Recomendado)
 
-1. Arrastra la carpeta del proyecto a [Netlify Drop](https://app.netlify.com/drop)
-2. O conecta tu repositorio de GitHub
+1. Sube el código a GitHub
+2. Ve a [Vercel](https://vercel.com/) e inicia sesión
+3. Haz clic en **Add New Project**
+4. Importa tu repositorio de GitHub
+5. Configura las variables de entorno:
+   - `BREVO_API_KEY` = tu API key de Brevo
+   - `BREVO_LIST_ID` = tu List ID de Brevo
+6. Haz clic en **Deploy**
+
+**Alternativa con Vercel CLI:**
+```bash
+npm i -g vercel
+vercel
+```
 
 ### Opción 4: Servidor Web Tradicional
 
@@ -51,26 +63,18 @@ Sube todos los archivos vía FTP/SFTP a tu servidor web.
 
 ## ⚙️ Configuración del Formulario
 
-**IMPORTANTE:** El formulario necesita configuración para funcionar.
+**IMPORTANTE:** El formulario está configurado para usar Brevo a través de Vercel Serverless Functions.
 
-### Opción Recomendada: Formspree (Gratis)
+### Configuración en Vercel
 
-1. Ve a https://formspree.io/ y crea una cuenta
-2. Crea un nuevo formulario
-3. Copia tu ID (ejemplo: `xrgkqyzw`)
-4. Abre `script.js` y reemplaza `YOUR_FORMSPREE_ID` con tu ID:
+1. Ve a tu proyecto en [Vercel](https://vercel.com/)
+2. **Settings** > **Environment Variables**
+3. Añade estas variables:
+   - `BREVO_API_KEY` = tu API key de Brevo
+   - `BREVO_LIST_ID` = tu List ID de Brevo
+4. Haz un nuevo deploy después de configurar las variables
 
-```javascript
-const formspreeId = 'xrgkqyzw'; // Tu ID aquí
-```
-
-### Opción Alternativa: Mailto
-
-Si no configuras Formspree, el formulario usará `mailto:` automáticamente. Puedes cambiar el email en `script.js` línea 141:
-
-```javascript
-window.location.href = `mailto:tu-email@ejemplo.com?subject=${subject}&body=${body}`;
-```
+Para más detalles, consulta **`CONFIGURACION-BREVO.md`**
 
 ## 🖼️ Imágenes
 
@@ -87,10 +91,10 @@ Las imágenes están configuradas para cargar desde la carpeta `public/`. Si pre
 
 ## 📝 Notas Importantes
 
-- ✅ No necesitas Node.js, npm, o ningún framework
+- ✅ No necesitas Node.js, npm, o ningún framework (solo para desarrollo local)
 - ✅ Funciona en cualquier servidor web
 - ✅ Compatible con todos los navegadores modernos
-- ⚠️ El formulario necesita configuración (Formspree o mailto)
+- ⚠️ El formulario necesita configuración de variables de entorno en Vercel
 - ⚠️ Las imágenes deben estar en `public/` o ajustar las rutas
 
 ## 🔍 Verificación
@@ -98,10 +102,11 @@ Las imágenes están configuradas para cargar desde la carpeta `public/`. Si pre
 Antes de desplegar, verifica:
 
 1. ✅ Todas las imágenes cargan correctamente
-2. ✅ El formulario está configurado (Formspree o mailto)
+2. ✅ Las variables de entorno están configuradas en Vercel
 3. ✅ Los enlaces de navegación funcionan
 4. ✅ El menú móvil funciona
 5. ✅ El acordeón de FAQ funciona
+6. ✅ La función `/api/brevo` está desplegada correctamente
 
 ## 📞 Soporte
 

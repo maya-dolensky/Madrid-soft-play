@@ -9,6 +9,9 @@ soft-play-madrid/
 ├── index.html          # Página principal
 ├── styles.css          # Estilos personalizados
 ├── script.js           # Funcionalidad JavaScript
+├── api/
+│   └── brevo.js        # Función serverless para formulario (Brevo)
+├── vercel.json         # Configuración de Vercel
 ├── public/             # Imágenes y recursos estáticos
 │   ├── logo.png
 │   ├── rincondeSueños.png
@@ -30,34 +33,18 @@ soft-play-madrid/
 
 ## Configuración del Formulario de Contacto
 
-El formulario de contacto tiene dos opciones:
+El formulario de contacto está configurado para usar **Brevo** a través de **Vercel Serverless Functions**.
 
-### Opción 1: Formspree (Recomendado)
+### Configuración en Vercel
 
-1. Ve a [Formspree.io](https://formspree.io/) y crea una cuenta gratuita
-2. Crea un nuevo formulario
-3. Copia tu ID de formulario (ejemplo: `xrgkqyzw`)
-4. Abre `script.js` y reemplaza `YOUR_FORMSPREE_ID` con tu ID:
+1. Ve a tu proyecto en [Vercel](https://vercel.com/)
+2. **Settings** > **Environment Variables**
+3. Añade estas variables:
+   - `BREVO_API_KEY` = tu API key de Brevo
+   - `BREVO_LIST_ID` = tu List ID de Brevo
+4. Haz un nuevo deploy después de configurar las variables
 
-```javascript
-const formspreeId = 'xrgkqyzw'; // Tu ID aquí
-```
-
-### Opción 2: Mailto (Fallback)
-
-Si no configuras Formspree, el formulario usará `mailto:` como fallback. Puedes cambiar el email en `script.js`:
-
-```javascript
-window.location.href = `mailto:tu-email@ejemplo.com?subject=${subject}&body=${body}`;
-```
-
-### Opción 3: EmailJS
-
-También puedes usar EmailJS. Necesitarás:
-1. Crear una cuenta en [EmailJS](https://www.emailjs.com/)
-2. Configurar un servicio de email
-3. Obtener tu Service ID, Template ID y Public Key
-4. Modificar el código en `script.js` para usar EmailJS
+Para más detalles, consulta **`CONFIGURACION-BREVO.md`**
 
 ## Despliegue
 
@@ -68,17 +55,21 @@ También puedes usar EmailJS. Necesitarás:
 3. Selecciona la rama `main` y la carpeta `/ (root)`
 4. Tu sitio estará disponible en `https://tu-usuario.github.io/tu-repositorio`
 
-### Netlify
+### Vercel (Recomendado)
 
-1. Arrastra la carpeta del proyecto a [Netlify Drop](https://app.netlify.com/drop)
-2. O conecta tu repositorio de GitHub a Netlify
-3. El sitio se desplegará automáticamente
+**Opción A: Conectar con GitHub**
+1. Sube el código a GitHub
+2. Ve a [Vercel](https://vercel.com/) e inicia sesión
+3. Haz clic en **Add New Project**
+4. Importa tu repositorio de GitHub
+5. Configura las variables de entorno (ver sección de formulario)
+6. Haz clic en **Deploy**
 
-### Vercel
-
+**Opción B: Vercel CLI**
 1. Instala Vercel CLI: `npm i -g vercel`
 2. Ejecuta `vercel` en la carpeta del proyecto
 3. Sigue las instrucciones
+4. Configura las variables de entorno en el dashboard de Vercel
 
 ### Servidor Web Tradicional
 
@@ -116,8 +107,8 @@ Los estilos principales vienen de Tailwind CSS (CDN). Los estilos personalizados
 ## Notas Importantes
 
 - Las imágenes deben estar en la carpeta `public/` o ajustar las rutas en `index.html`
-- El formulario necesita configuración (Formspree, EmailJS o mailto)
-- No hay backend - todo es estático
+- El formulario necesita configuración de variables de entorno en Vercel
+- La función serverless (`api/brevo.js`) se despliega automáticamente en Vercel
 - Compatible con todos los navegadores modernos
 
 ## Soporte
