@@ -1,5 +1,6 @@
 // Google Apps Script para recibir datos del formulario
 // Copia y pega este código en Google Apps Script
+// IMPORTANTE: Con no-cors, esta función debe funcionar sin devolver respuesta visible
 
 function doPost(e) {
   try {
