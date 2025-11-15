@@ -1,0 +1,21 @@
+{
+  "name": "madrid-soft-play-static",
+  "version": "1.0.0",
+  "description": "Sitio web estático para Madrid Soft Play - Alquiler de soft play a domicilio en Madrid",
+  "private": true,
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "serve:php": "php -S localhost:8000"
+  },
+  "keywords": [
+    "soft-play",
+    "madrid",
+    "static-site",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+

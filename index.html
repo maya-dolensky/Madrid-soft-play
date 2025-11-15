@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alquiler de soft play y plaza blanda a domicilio en Madrid | Madrid Soft Play</title>
+  <meta name="description" content="Montamos tu zona de juegos para bebés (0–3 años) en casa o eventos. Seguro, limpio y con entrega en toda la Comunidad de Madrid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+    // Detectar basePath y corregir rutas dinámicamente para GitHub Pages
+    (function() {
+      const path = window.location.pathname;
+      const match = path.match(/^\/([^\/]+)\//);
+      let basePath = '';
+      if (match && match[1] && !['index.html', 'styles.css', 'script.js', 'public'].includes(match[1])) {
+        basePath = '/' + match[1];
+      }
+      
+      // Corregir ruta de CSS
+      const link = document.querySelector('link[href="./styles.css"]');
+      if (link) link.href = basePath + '/styles.css';
+      
+      // Corregir rutas de imágenes
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        const originalSrc = img.getAttribute('data-src');
+        img.src = basePath + originalSrc;
+      });
+    })();
+  </script>
+</head>
+<body class="font-sans antialiased">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="container px-4 mx-auto">
+      <div class="flex items-center justify-between h-20 md:h-24">
+        <!-- Logo -->
+        <button onclick="scrollToTop()" class="flex items-center space-x-2 hover:opacity-80 transition-opacity overflow-hidden -ml-2 md:-ml-24">
+          <div class="h-12 md:h-16 overflow-hidden flex items-center">
+            <img src="/public/logo.png" alt="Logo" data-src="/public/logo.png" class="w-auto h-[200%] md:h-[250%] object-contain object-center">
+          </div>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-6">
+          <button onclick="scrollToSection('pricing')" class="text-foreground hover:text-accent hover:bg-transparent px-4 py-2 rounded-md transition-colors">
+            Paquetes
+          </button>
+          <button onclick="scrollToSection('comentarios')" class="text-foreground hover:text-accent hover:bg-transparent px-4 py-2 rounded-md transition-colors">
+            Comentarios
+          </button>
+          <button onclick="scrollToSection('lead-form')" class="text-foreground hover:text-accent hover:bg-transparent px-4 py-2 rounded-md transition-colors">
+            Contacto
+          </button>
+          <button onclick="scrollToSection('faq')" class="text-foreground hover:text-accent hover:bg-transparent px-4 py-2 rounded-md transition-colors">
+            FAQ
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-foreground hover:text-accent transition-colors" aria-label="Toggle menu">
+          <svg id="menu-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="md:hidden hidden pb-4 space-y-2">
+        <button onclick="scrollToSection('pricing')" class="w-full text-left px-4 py-2 text-foreground hover:text-accent hover:bg-transparent rounded-md transition-colors">
+          Paquetes
+        </button>
+        <button onclick="scrollToSection('comentarios')" class="w-full text-left px-4 py-2 text-foreground hover:text-accent hover:bg-transparent rounded-md transition-colors">
+          Comentarios
+        </button>
+        <button onclick="scrollToSection('lead-form')" class="w-full text-left px-4 py-2 text-foreground hover:text-accent hover:bg-transparent rounded-md transition-colors">
+          Contacto
+        </button>
+        <button onclick="scrollToSection('faq')" class="w-full text-left px-4 py-2 text-foreground hover:text-accent hover:bg-transparent rounded-md transition-colors">
+          FAQ
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-secondary via-background to-muted pt-20 md:pt-24">
+      <div class="absolute inset-0 opacity-10">
+        <img src="/public/soft-play-boho-neutral-beige-setup-with-baby-toys.jpg" alt="" data-src="/public/soft-play-boho-neutral-beige-setup-with-baby-toys.jpg" class="w-full h-full object-cover">
+      </div>
+
+      <div class="container relative z-10 px-4 py-20 mx-auto text-center">
+        <div class="max-w-4xl mx-auto space-y-8">
+          <h1 class="text-5xl md:text-7xl font-bold text-balance leading-tight text-foreground">
+            Soft Play a domicilio en Madrid
+            <span class="block text-3xl md:text-5xl mt-4 text-muted-foreground font-normal">(0–3 años)</span>
+          </h1>
+
+          <p class="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+            Un rincón de juego bonito y seguro para tu evento.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+            <button onclick="scrollToSection('lead-form')" class="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground rounded-md font-medium transition-colors inline-flex items-center">
+              <svg class="mr-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Solicitar Información
+            </button>
+            <button onclick="scrollToSection('pricing')" class="text-lg px-8 py-6 border-2 border-border bg-transparent rounded-md font-medium transition-colors inline-flex items-center hover:bg-accent/10">
+              <svg class="mr-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+              Saber más
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-20 bg-card">
+      <div class="container px-4 mx-auto">
+        <div class="max-w-3xl mx-auto text-center space-y-8">
+          <p class="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
+            Montamos tu zona de juego segura para bebés y niños pequeños. Sin motores, sin ruido y con materiales
+            certificados. Ideal para cumpleaños, bautizos o bodas.
+          </p>
+
+          <div class="grid grid-cols-3 gap-8 pt-8 max-w-md mx-auto">
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
+                <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-center text-foreground">Limpieza garantizada</p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
+                <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-center text-foreground">0–3 años</p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
+                <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-center text-foreground">Materiales Seguros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-muted/30">
+      <div class="container px-4 mx-auto">
+        <div class="text-center space-y-4 mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-balance text-foreground">
+            Elige tu Aventura Soft Play
+          </h2>
+          <p class="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+            Desde un rincón de sueños hasta un parque completo. Nuestros packs son
+            acumulativos. Todos incluyen montaje, desinfección y seguro.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Pack 1: Rincón de Sueños -->
+          <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm relative">
+            <div class="px-6 space-y-4">
+              <div class="aspect-video rounded-lg overflow-hidden bg-muted">
+                <img src="/public/rincondeSueños.png" alt="Rincón de Sueños" data-src="/public/rincondeSueños.png" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold leading-none">Rincón de Sueños</h3>
+              </div>
+            </div>
+
+            <div class="px-6 space-y-6">
+              <div class="space-y-1">
+                <p class="text-sm text-muted-foreground">precio sin costo de envío</p>
+                <p class="text-4xl font-bold text-foreground">250€</p>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-foreground">Piscina de bolas</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-foreground">Pelotas de colores</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-foreground">Suelo acolchado de seguridad</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="px-6">
+              <button onclick="scrollToSection('lead-form')" class="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-center py-3 rounded-md font-medium transition-colors">
+                Guardar fecha
+              </button>
+            </div>
+          </div>
+
+          <!-- Pack 2: Aventura Inicial -->
+          <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border-2 border-accent py-6 shadow-lg relative">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold">
+              Más popular
+            </div>
+            <div class="px-6 space-y-4">
+              <div class="aspect-video rounded-lg overflow-hidden bg-muted">
+                <img src="/public/aventuraInicial.png" alt="Aventura Inicial" data-src="/public/aventuraInicial.png" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold leading-none">Aventura Inicial</h3>
+              </div>
+            </div>
+
+            <div class="px-6 space-y-6">
+              <div class="space-y-1">
+                <p class="text-sm text-muted-foreground">precio sin costo de envío</p>
+                <p class="text-4xl font-bold text-foreground">320€</p>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-foreground">Todo lo del Rincón de Sueños</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-foreground">Set de bloques de espuma</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-foreground">Estructura 'Step and Slide' (rampa/escalera)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="px-6">
+              <button onclick="scrollToSection('lead-form')" class="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-center py-3 rounded-md font-medium transition-colors">
+                Guardar fecha
+              </button>
+            </div>
+          </div>
+
+          <!-- Pack 3: Plus Adventure -->
+          <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm relative">
+            <div class="px-6 space-y-4">
+              <div class="aspect-video rounded-lg overflow-hidden bg-muted">
+                <img src="/public/plusAdventure.png" alt="Plus Adventure" data-src="/public/plusAdventure.png" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold leading-none">Plus Adventure</h3>
+              </div>
+            </div>
+
+            <div class="px-6 space-y-6">
+              <div class="space-y-1">
+                <p class="text-sm text-muted-foreground">precio sin costo de envío</p>
+                <p class="text-4xl font-bold text-foreground">400€</p>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-foreground">Todo lo del Aventura Inicial</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-foreground">Túnel de gateo flexible</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-foreground">Balancín suave (curvo)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="px-6">
+              <button onclick="scrollToSection('lead-form')" class="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-center py-3 rounded-md font-medium transition-colors">
+                Guardar fecha
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-card">
+      <div class="container px-4 mx-auto">
+        <div class="text-center space-y-4 mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-balance text-foreground">Cómo funciona</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+          <div class="text-center space-y-4">
+            <div class="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
+              <span class="text-4xl font-bold text-accent">1</span>
+            </div>
+            <h3 class="text-xl font-semibold text-foreground">Reservas tu fecha</h3>
+            <p class="text-muted-foreground text-pretty leading-relaxed">Completa el formulario con los detalles de tu evento</p>
+          </div>
+          <div class="text-center space-y-4">
+            <div class="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
+              <span class="text-4xl font-bold text-accent">2</span>
+            </div>
+            <h3 class="text-xl font-semibold text-foreground">Montamos y desinfectamos</h3>
+            <p class="text-muted-foreground text-pretty leading-relaxed">Llegamos antes de tu evento para dejar todo listo</p>
+          </div>
+          <div class="text-center space-y-4">
+            <div class="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
+              <span class="text-4xl font-bold text-accent">3</span>
+            </div>
+            <h3 class="text-xl font-semibold text-foreground">Disfrutáis y recogemos</h3>
+            <p class="text-muted-foreground text-pretty leading-relaxed">Los peques juegan seguros y nosotros recogemos al final</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="comentarios" class="py-20 bg-card">
+      <div class="container px-4 mx-auto">
+        <div class="text-center space-y-4 mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-balance text-foreground">Lo que dicen las familias</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+            <div class="px-6 space-y-4">
+              <div class="flex gap-1">
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <p class="text-foreground leading-relaxed text-pretty">"Mi hija de 2 años lo pasó genial en su cumpleaños. Todo estaba impecable y el montaje fue rapidísimo."</p>
+              <div class="pt-2">
+                <p class="font-semibold text-foreground">María G.</p>
+                <p class="text-sm text-muted-foreground">Chamberí</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+            <div class="px-6 space-y-4">
+              <div class="flex gap-1">
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <p class="text-foreground leading-relaxed text-pretty">"Perfecto para el bautizo de nuestro bebé. Los invitados con niños pequeños estaban encantados."</p>
+              <div class="pt-2">
+                <p class="font-semibold text-foreground">Carlos R.</p>
+                <p class="text-sm text-muted-foreground">Salamanca</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+            <div class="px-6 space-y-4">
+              <div class="flex gap-1">
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg class="w-5 h-5 fill-accent text-accent" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <p class="text-foreground leading-relaxed text-pretty">"La estética boho quedó preciosa en las fotos. Muy profesionales y atentos en todo momento."</p>
+              <div class="pt-2">
+                <p class="font-semibold text-foreground">Laura M.</p>
+                <p class="text-sm text-muted-foreground">Retiro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section id="lead-form" class="py-20 bg-gradient-to-br from-muted/30 to-secondary/20">
+      <div class="container px-4 mx-auto">
+        <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-lg max-w-2xl mx-auto">
+          <div class="px-6 text-center space-y-2">
+            <h2 class="text-3xl md:text-4xl font-bold text-balance leading-none font-semibold">
+              ¿Quieres reservar o saber más?
+            </h2>
+            <p class="text-muted-foreground text-sm">
+              Déjanos tus datos y te contactaremos con prioridad en el lanzamiento
+            </p>
+          </div>
+
+          <div class="px-6">
+            <div id="form-success" class="hidden py-12 text-center space-y-4">
+              <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
+                <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-foreground">¡Gracias!</h3>
+              <p class="text-muted-foreground">Te contactaremos con prioridad en el lanzamiento.</p>
+            </div>
+
+            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label for="name" class="text-sm font-medium leading-none">Nombre completo</label>
+                  <input id="name" name="name" type="text" placeholder="María García" required class="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
+                </div>
+
+                <div class="space-y-2">
+                  <label for="email" class="text-sm font-medium leading-none">Email</label>
+                  <input id="email" name="email" type="email" placeholder="maria@ejemplo.com" required class="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label for="date" class="text-sm font-medium leading-none">Fecha del evento</label>
+                  <input id="date" name="date" type="date" required class="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
+                </div>
+
+                <div class="space-y-2">
+                  <label for="neighborhood" class="text-sm font-medium leading-none">Barrio</label>
+                  <input id="neighborhood" name="neighborhood" type="text" placeholder="Chamberí" required class="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label for="age" class="text-sm font-medium leading-none">Edad del peque</label>
+                  <select id="age" name="age" required class="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
+                    <option value="">Selecciona</option>
+                    <option value="0-1">0-1 año</option>
+                    <option value="1-2">1-2 años</option>
+                    <option value="2-3">2-3 años</option>
+                  </select>
+                </div>
+
+                <div class="space-y-2">
+                  <label for="pack" class="text-sm font-medium leading-none">Pack</label>
+                  <select id="pack" name="pack" required class="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
+                    <option value="">Selecciona</option>
+                    <option value="250">250€ - Rincón de Sueños</option>
+                    <option value="320">320€ - Aventura Inicial</option>
+                    <option value="400">400€ - Plus Adventure</option>
+                    <option value="custom">Personalizado</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label for="message" class="text-sm font-medium leading-none">¿Quieres contarnos algo más? (opcional)</label>
+                <textarea id="message" name="message" placeholder="Cuéntanos detalles del evento, horarios, dudas, etc." rows="4" class="flex min-h-[60px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6 rounded-md font-medium transition-colors">
+                Solicitar Información
+              </button>
+
+              <p id="form-error" class="text-sm text-center text-red-600 hidden"></p>
+
+              <p class="text-xs text-center text-muted-foreground">
+                Al enviar este formulario, aceptas nuestra política de privacidad
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-muted">
+      <div class="container px-4 mx-auto">
+        <div class="max-w-3xl mx-auto space-y-8">
+          <div class="text-center space-y-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-balance text-foreground">
+              Preguntas Frecuentes
+            </h2>
+            <p class="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              Aquí respondemos a todas las dudas de los padres que quieren crear
+              una fiesta inolvidable y segura para sus bebés.
+            </p>
+          </div>
+
+          <div class="w-full bg-card border border-border rounded-xl shadow-sm overflow-hidden">
+            <div class="accordion-container">
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>¿Para qué edades está recomendado el alquiler de soft play?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    Nuestros parques de soft play están diseñados específicamente para la etapa más temprana: bebés y niños pequeños de 6 meses a 4 años. Es la opción ideal y más segura para primeros cumpleaños, bautizos o cualquier evento donde los más pequeños necesiten un espacio propio.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>Como padre, la higiene es mi prioridad. ¿Cómo garantizan la limpieza del equipo?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    La higiene es nuestra obsesión y nuestra máxima prioridad. Seguimos un protocolo de desinfección de 3 pasos después de CADA alquiler:
+
+• Aspiración profunda de todos los módulos, colchonetas y piscinas.
+• Desinfección de superficies con un producto profesional que elimina el 99.9% de gérmenes y virus, siendo totalmente seguro para bebés.
+• Higienización de cada bola en nuestra máquina de limpieza especializada.
+
+Con Madrid Soft Play, alquilas tranquilidad total.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>¿En qué se diferencia el soft play de un castillo hinchable?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    La gran diferencia es la seguridad y la edad. Los castillos hinchables están pensados para niños más mayores (de 2 a 6 años o más). Nuestro soft play está diseñado para el nicho que los hinchables no pueden cubrir: bebés de 0 a 3 años. Es un entorno controlado, a su escala, con espuma de alta densidad y 100% seguro para que puedan gatear, explorar y dar sus primeros pasos sin riesgo.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>Vivo en un piso en Madrid, ¿necesito mucho espacio para el soft play?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    ¡Para nada! Nuestros paquetes son modulares y muy versátiles. Funcionan perfectamente en pisos, salones o jardines pequeños. Como referencia, nuestro paquete estándar más popular suele requerir unos 3x3 metros, pero siempre podemos reconfigurar los módulos para adaptarnos perfectamente a tu espacio disponible.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>¿Qué incluye exactamente el precio del alquiler? ¿Tengo que montarlo yo?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    El precio del alquiler incluye nuestro servicio completo de montaje y desmontaje. Nosotros nos encargamos de la instalación profesional para tu tranquilidad:
+
+• Montaje profesional antes de que lleguen los invitados.
+• Desmontaje completo y rápido al finalizar el evento.
+• El transporte NO está incluido y se cotiza por separado según la zona de entrega en Madrid.
+
+Tú no tienes que preocuparte por el montaje, solo de disfrutar la fiesta.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>¿El soft play es solo diversión o aporta algo al desarrollo de mi bebé?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    ¡Es mucho más que diversión! Es una potente herramienta de estimulación temprana. Los diferentes módulos, texturas y la piscina de bolas están diseñados para fomentar:
+
+• Desarrollo motor grueso: Gatear, escalar, mejorar el equilibrio.
+• Desarrollo motor fino: Agarrar y soltar las bolas.
+• Desarrollo sensorial: Explorar colores y texturas.
+• Desarrollo cognitivo: Aprender la "permanencia del objeto" en la piscina de bolas.
+
+No solo alquilas un juego, inviertes en el desarrollo de tu hijo.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>¿De qué materiales está hecho el equipo? ¿Son seguros si mi bebé lo muerde?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    Entendemos perfectamente esa preocupación. Todo nuestro equipo es de calidad profesional, fabricado con espuma de alta densidad y recubierto de vinipiel lavable. Es el mismo material que se usa en guarderías y centros de estimulación. Es suave, resistente, no tóxico y completamente seguro para bebés que están en la etapa de explorarlo todo con la boca.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>¿Dónde puedo instalar el parque de soft play? ¿Solo en interiores?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    ¡Donde tú celebres el evento! Montamos nuestros parques en casas particulares, pisos, jardines, parques (con los permisos correspondientes), restaurantes, hoteles o cualquier local de eventos en la Comunidad de Madrid. Nos adaptamos a superficies interiores y exteriores.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>¿Cuánto tardan en montar y desmontar el equipo el día de la fiesta?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    Somos muy eficientes para interrumpir lo mínimo posible. Generalmente, llegamos 1 hora antes del evento y el montaje nos toma unos 30-45 minutos. El desmontaje es igual de rápido.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-b last:border-b-0 px-6">
+                <button class="accordion-trigger w-full flex items-start justify-between gap-4 rounded-md py-4 text-left text-lg font-semibold text-foreground hover:text-accent transition-colors" onclick="toggleAccordion(this)">
+                  <span>¿Con cuánta antelación debo reservar mi soft play para un cumpleaños?</span>
+                  <svg class="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="accordion-content hidden overflow-hidden text-sm">
+                  <div class="pt-0 pb-4 text-muted-foreground leading-relaxed whitespace-pre-line">
+                    Los primeros cumpleaños y los fines de semana son nuestras fechas más solicitadas. Para asegurar la disponibilidad de tu paquete preferido, te recomendamos reservar con al menos 4 a 6 semanas de antelación, especialmente si tu evento es en temporada alta (primavera-verano).
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-primary-foreground py-12">
+      <div class="container px-4 mx-auto">
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div class="space-y-4">
+            <h3 class="text-xl font-bold">Madrid Soft Play</h3>
+            <p class="text-sm opacity-90 text-pretty leading-relaxed">
+              Plaza blanda a domicilio para bebés y niños pequeños en toda la Comunidad de Madrid.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-75">
+          <p>Madrid Soft Play</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+

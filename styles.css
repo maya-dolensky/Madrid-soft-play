@@ -1,0 +1,129 @@
+/* Custom CSS Variables - Nordic/boho color palette */
+:root {
+  --background: oklch(0.98 0.005 85);
+  --foreground: oklch(0.25 0.01 60);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.01 60);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.01 60);
+  --primary: oklch(0.35 0.02 60);
+  --primary-foreground: oklch(0.98 0.005 85);
+  --secondary: oklch(0.92 0.01 75);
+  --secondary-foreground: oklch(0.35 0.02 60);
+  --muted: oklch(0.95 0.008 80);
+  --muted-foreground: oklch(0.5 0.015 65);
+  --accent: oklch(0.75 0.08 25);
+  --accent-foreground: oklch(0.98 0.005 85);
+  --border: oklch(0.88 0.01 75);
+  --input: oklch(0.88 0.01 75);
+  --ring: oklch(0.75 0.08 25);
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Tailwind Config Override */
+@layer base {
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .text-muted-foreground {
+    color: var(--muted-foreground);
+  }
+  .text-accent {
+    color: var(--accent);
+  }
+  .text-accent-foreground {
+    color: var(--accent-foreground);
+  }
+  .text-primary-foreground {
+    color: var(--primary-foreground);
+  }
+  .bg-background {
+    background-color: var(--background);
+  }
+  .bg-card {
+    background-color: var(--card);
+  }
+  .bg-muted {
+    background-color: var(--muted);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+  .border-border {
+    border-color: var(--border);
+  }
+  .border-input {
+    border-color: var(--input);
+  }
+  .border-accent {
+    border-color: var(--accent);
+  }
+  .bg-accent/10 {
+    background-color: oklch(0.75 0.08 25 / 0.1);
+  }
+  .bg-accent/90 {
+    background-color: oklch(0.75 0.08 25 / 0.9);
+  }
+  .bg-muted/30 {
+    background-color: oklch(0.95 0.008 80 / 0.3);
+  }
+  .bg-secondary/20 {
+    background-color: oklch(0.92 0.01 75 / 0.2);
+  }
+  .bg-background/95 {
+    background-color: oklch(0.98 0.005 85 / 0.95);
+  }
+  .border-primary-foreground/20 {
+    border-color: oklch(0.98 0.005 85 / 0.2);
+  }
+}
+
+/* Accordion animations */
+.accordion-content {
+  max-height: 0;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  overflow: hidden;
+}
+
+.accordion-content.open {
+  max-height: 1000px;
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
+.accordion-trigger svg {
+  transition: transform 0.2s ease;
+}
+
+.accordion-trigger.active svg {
+  transform: rotate(180deg);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar scroll effect */
+.navbar-scrolled {
+  background-color: oklch(0.98 0.005 85 / 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
