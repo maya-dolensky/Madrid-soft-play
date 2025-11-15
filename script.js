@@ -108,10 +108,10 @@ async function handleFormSubmit(event) {
   submitBtn.textContent = 'Enviando...';
   
   try {
-    // URL del endpoint - Cambia esto por tu URL de Railway/Render cuando esté desplegado
-    // Por ahora, si estás en Vercel usa '/api/brevo', si estás en GitHub Pages usa tu URL de Railway
+    // URL del endpoint - Cambia esto por tu URL de Render cuando esté desplegado
+    // Si estás en Vercel usa '/api/brevo', si estás en GitHub Pages usa tu URL de Render
     const API_URL = window.location.hostname.includes('github.io') 
-      ? 'https://TU-PROYECTO.up.railway.app/brevo' // Cambia esto por tu URL de Railway
+      ? 'https://TU-PROYECTO.onrender.com/brevo' // Cambia esto por tu URL de Render (ver RENDER-SETUP.md)
       : '/api/brevo'; // Para Vercel
     
     const response = await fetch(API_URL, {
