@@ -1,0 +1,17 @@
+{
+  "name": "brevo-endpoint",
+  "version": "1.0.0",
+  "description": "Endpoint simple para Brevo",
+  "main": "railway-endpoint.js",
+  "scripts": {
+    "start": "node railway-endpoint.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
+

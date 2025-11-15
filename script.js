@@ -108,8 +108,13 @@ async function handleFormSubmit(event) {
   submitBtn.textContent = 'Enviando...';
   
   try {
-    // Llamar a la función serverless de Vercel que se conecta con Brevo
-    const response = await fetch('/api/brevo', {
+    // URL del endpoint - Cambia esto por tu URL de Railway/Render cuando esté desplegado
+    // Por ahora, si estás en Vercel usa '/api/brevo', si estás en GitHub Pages usa tu URL de Railway
+    const API_URL = window.location.hostname.includes('github.io') 
+      ? 'https://TU-PROYECTO.up.railway.app/brevo' // Cambia esto por tu URL de Railway
+      : '/api/brevo'; // Para Vercel
+    
+    const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
