@@ -1,17 +1,17 @@
-export default async function handler(req, res) {
-  // Solo permitir POST
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  // Configurar CORS
+module.exports = async (req, res) => {
+  // Configurar CORS primero
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  // Manejar preflight
+  // Manejar preflight OPTIONS
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
+  }
+
+  // Solo permitir POST después de manejar OPTIONS
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
@@ -44,20 +44,6 @@ export default async function handler(req, res) {
     const nameParts = name.trim().split(' ');
     const firstName = nameParts[0] || '';
     const lastName = nameParts.slice(1).join(' ') || '';
-
-    // Crear el cuerpo del mensaje con todos los detalles
-    const emailBody = `
-Nueva solicitud de información - Madrid Soft Play
-
-Datos del contacto:
-- Nombre: ${name}
-- Email: ${email}
-- Fecha del evento: ${date}
-- Barrio: ${neighborhood}
-- Edad del peque: ${age}
-- Pack seleccionado: ${pack}
-${message ? `- Mensaje adicional: ${message}` : ''}
-    `.trim();
 
     // Datos para crear/actualizar contacto en Brevo
     const contactData = {
@@ -149,5 +135,4 @@ ${message ? `- Mensaje adicional: ${message}` : ''}
       error: 'Internal server error. Please try again later.' 
     });
   }
-}
-
+};
