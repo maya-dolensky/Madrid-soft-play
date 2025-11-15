@@ -60,10 +60,11 @@ function scrollToTop() {
 function toggleAccordion(button) {
   const item = button.closest('.accordion-item');
   const content = item.querySelector('.accordion-content');
-  const isOpen = content.classList.contains('open');
+  const isOpen = !content.classList.contains('hidden');
   
   // Close all accordions
   document.querySelectorAll('.accordion-content').forEach(acc => {
+    acc.classList.add('hidden');
     acc.classList.remove('open');
   });
   document.querySelectorAll('.accordion-trigger').forEach(btn => {
@@ -71,7 +72,11 @@ function toggleAccordion(button) {
   });
   
   // Open clicked accordion if it was closed
-  if (!isOpen) {
+  if (isOpen) {
+    // It was open, so close it (already closed above)
+  } else {
+    // It was closed, so open it
+    content.classList.remove('hidden');
     content.classList.add('open');
     button.classList.add('active');
   }
