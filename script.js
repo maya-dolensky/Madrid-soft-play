@@ -108,11 +108,9 @@ async function handleFormSubmit(event) {
   submitBtn.textContent = 'Enviando...';
   
   try {
-    // URL del endpoint - Cambia esto por tu URL de Render cuando esté desplegado
-    // Si estás en Vercel usa '/api/brevo', si estás en GitHub Pages usa tu URL de Render
-    const API_URL = window.location.hostname.includes('github.io') 
-      ? 'https://TU-PROYECTO.onrender.com/brevo' // Cambia esto por tu URL de Render (ver RENDER-SETUP.md)
-      : '/api/brevo'; // Para Vercel
+    // URL del Google Apps Script Web App
+    // Obtén la URL siguiendo las instrucciones en GOOGLE-SHEETS-SETUP.md
+    const API_URL = 'https://script.google.com/macros/s/TU-URL-AQUI/exec'; // ← Reemplaza con tu URL de Google Apps Script
     
     const response = await fetch(API_URL, {
       method: 'POST',
