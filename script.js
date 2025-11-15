@@ -120,15 +120,20 @@ async function handleFormSubmit(event) {
       body: JSON.stringify(data)
     });
     
-    // Verificar el Content-Type de la respuesta
-    const contentType = response.headers.get('content-type');
-    if (!contentType || !contentType.includes('application/json')) {
-      const text = await response.text();
-      console.error('Response is not JSON:', text.substring(0, 200));
-      throw new Error('El servidor devolvió una respuesta inesperada. Por favor, verifica la configuración.');
-    }
+    // Google Apps Script puede devolver texto o JSON
+    const responseText = await response.text();
+    let result;
     
-    const result = await response.json();
+    try {
+      result = JSON.parse(responseText);
+    } catch (e) {
+      // Si no es JSON, asumir éxito si la respuesta es 200
+      if (response.ok) {
+        result = { success: true };
+      } else {
+        throw new Error('Error al enviar el formulario');
+      }
+    }
     
     if (!response.ok || !result.success) {
       throw new Error(result.error || 'Error al enviar el formulario');
