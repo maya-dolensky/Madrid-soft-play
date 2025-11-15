@@ -16,7 +16,13 @@ function doPost(e) {
       return ContentService.createTextOutput(JSON.stringify({
         success: false,
         error: 'Faltan campos requeridos'
-      })).setMimeType(ContentService.MimeType.JSON);
+      }))
+      .setMimeType(ContentService.MimeType.JSON)
+      .setHeaders({
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type'
+      });
     }
     
     // Agregar fila con los datos
@@ -34,18 +40,30 @@ function doPost(e) {
     
     sheet.appendRow(row);
     
-    // Respuesta exitosa
+    // Respuesta exitosa con headers CORS
     return ContentService.createTextOutput(JSON.stringify({
       success: true,
       message: 'Datos guardados correctamente'
-    })).setMimeType(ContentService.MimeType.JSON);
+    }))
+    .setMimeType(ContentService.MimeType.JSON)
+    .setHeaders({
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    });
     
   } catch (error) {
     // Manejo de errores
     return ContentService.createTextOutput(JSON.stringify({
       success: false,
       error: error.toString()
-    })).setMimeType(ContentService.MimeType.JSON);
+    }))
+    .setMimeType(ContentService.MimeType.JSON)
+    .setHeaders({
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    });
   }
 }
 

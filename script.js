@@ -110,7 +110,7 @@ async function handleFormSubmit(event) {
   try {
     // URL del Google Apps Script Web App
     // Obtén la URL siguiendo las instrucciones en GOOGLE-SHEETS-SETUP.md
-    const API_URL = 'https://script.google.com/macros/s/TU-URL-AQUI/exec'; // ← Reemplaza con tu URL de Google Apps Script
+    const API_URL = 'https://script.google.com/macros/s/AKfycbyFkwc_9cbzE_XxzZAi13SBHj0PJ53r1k7PRCIFR_f7sCpEUEDbXg42zgQGc5np0cKbgQ/exec'; // ← Reemplaza con tu URL de Google Apps Script
     
     const response = await fetch(API_URL, {
       method: 'POST',
