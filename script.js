@@ -117,6 +117,14 @@ async function handleFormSubmit(event) {
       body: JSON.stringify(data)
     });
     
+    // Verificar el Content-Type de la respuesta
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      const text = await response.text();
+      console.error('Response is not JSON:', text.substring(0, 200));
+      throw new Error('El servidor devolvió una respuesta inesperada. Por favor, verifica la configuración.');
+    }
+    
     const result = await response.json();
     
     if (!response.ok) {
