@@ -1,0 +1,186 @@
+========================================
+TEXTOS DE LA PÁGINA - MADRID SOFT PLAY
+========================================
+
+--- META TAGS ---
+Título de la página: Alquiler de soft play y plaza blanda a domicilio en Madrid | Madrid Soft Play
+Meta description: Montamos tu zona de juegos para bebés para todos tus eventos. Cumpleaños, bautizos, casamientos. Seguro, limpio y con entrega en toda la Comunidad de Madrid.
+
+--- NAVEGACIÓN ---
+Paquetes
+Comentarios
+Contacto
+FAQ
+
+--- HERO SECTION ---
+Título principal: Soft Play a domicilio en Madrid
+Subtítulo: Cumpleaños, bautizos, casamientos y más.
+Descripción: Un rincón de juego bonito y seguro para tu evento.
+Botón principal: Solicitar Información
+Botón secundario: Saber más
+
+--- TRUST SECTION ---
+Texto principal: Montamos tu zona de juego segura para bebés y niños pequeños. Sin motores, sin ruido y con materiales certificados. Ideal para cumpleaños, bautizos o bodas.
+Limpieza garantizada
+0–3 años
+Materiales Seguros
+
+--- PRICING SECTION ---
+Título: Elige tu Aventura Soft Play
+Descripción: Desde un rincón de sueños hasta un parque completo. Nuestros packs son acumulativos. Todos incluyen montaje, desinfección y seguro.
+
+PACK 1: RINCÓN DE SUEÑOS
+Nombre: Rincón de Sueños
+Precio: 250€
+Etiqueta precio: precio sin costo de envío
+Características:
+- Piscina de bolas
+- Pelotas de colores
+- Suelo acolchado de seguridad
+Botón: Guardar fecha
+
+PACK 2: AVENTURA INICIAL
+Nombre: Aventura Inicial
+Badge: Más popular
+Precio: 320€
+Etiqueta precio: precio sin costo de envío
+Características:
+- Todo lo del Rincón de Sueños
+- Set de bloques de espuma
+- Estructura 'Step and Slide' (rampa/escalera)
+Botón: Guardar fecha
+
+PACK 3: PLUS ADVENTURE
+Nombre: Plus Adventure
+Precio: 400€
+Etiqueta precio: precio sin costo de envío
+Características:
+- Todo lo del Aventura Inicial
+- Túnel de gateo flexible
+- Balancín suave (curvo)
+Botón: Guardar fecha
+
+--- CÓMO FUNCIONA SECTION ---
+Título: Cómo funciona
+
+Paso 1:
+Título: Reservas tu fecha
+Descripción: Completa el formulario con los detalles de tu evento
+
+Paso 2:
+Título: Montamos y desinfectamos
+Descripción: Llegamos antes de tu evento para dejar todo listo
+
+Paso 3:
+Título: Disfrutáis y recogemos
+Descripción: Los peques juegan seguros y nosotros recogemos al final
+
+--- TESTIMONIOS SECTION ---
+Título: Lo que dicen las familias
+
+Testimonio 1:
+Texto: "Mi hija de 2 años lo pasó genial en su cumpleaños. Todo estaba impecable y el montaje fue rapidísimo."
+Nombre: María G.
+Ubicación: Chamberí
+
+Testimonio 2:
+Texto: "Perfecto para el bautizo de nuestro bebé. Los invitados con niños pequeños estaban encantados."
+Nombre: Carlos R.
+Ubicación: Salamanca
+
+Testimonio 3:
+Texto: "La estética boho quedó preciosa en las fotos. Muy profesionales y atentos en todo momento."
+Nombre: Laura M.
+Ubicación: Retiro
+
+--- FORMULARIO DE CONTACTO ---
+Título: ¿Quieres reservar o saber más?
+Descripción: Déjanos tus datos y te contactaremos lo antes posible
+
+Mensaje de éxito:
+Título: ¡Gracias!
+Descripción: Te contactaremos lo antes posible.
+
+Campos del formulario:
+- Nombre completo (placeholder: María García)
+- Email (placeholder: maria@ejemplo.com)
+- Fecha del evento
+- Barrio (placeholder: Chamberí)
+- Edad del peque (opciones: Selecciona, 0-1 año, 1-2 años, 2-3 años, 3-4 años)
+- Pack (opciones: Selecciona, 250€ - Rincón de Sueños, 320€ - Aventura Inicial, 400€ - Plus Adventure, Personalizado)
+- Mensaje (placeholder: Cuéntanos detalles del evento, horarios, dudas, etc.)
+- Botón: Solicitar Información
+- Texto legal: Al enviar este formulario, aceptas nuestra política de privacidad
+
+Mensajes del formulario (JavaScript):
+- Enviando... (estado de carga)
+- No se pudo enviar el formulario. Por favor, inténtalo de nuevo. (mensaje de error)
+
+--- FAQ SECTION ---
+Título: Preguntas Frecuentes
+Descripción: Aquí respondemos a todas las dudas de los padres que quieren crear una fiesta inolvidable y segura para sus bebés.
+
+Pregunta 1:
+Pregunta: ¿Para qué edades está recomendado el alquiler de soft play?
+Respuesta: Nuestros parques de soft play están diseñados específicamente para la etapa más temprana: bebés y niños pequeños de 6 meses a 4 años. Es la opción ideal y más segura para primeros cumpleaños, bautizos o cualquier evento donde los más pequeños necesiten un espacio propio.
+
+Pregunta 2:
+Pregunta: Como padre, la higiene es mi prioridad. ¿Cómo garantizan la limpieza del equipo?
+Respuesta: La higiene es nuestra obsesión y nuestra máxima prioridad. Seguimos un protocolo de desinfección de 3 pasos después de CADA alquiler:
+
+• Aspiración profunda de todos los módulos, colchonetas y piscinas.
+• Desinfección de superficies con un producto profesional que elimina el 99.9% de gérmenes y virus, siendo totalmente seguro para bebés.
+• Higienización de cada bola para garantizar la higiene en todas las superficies de juego.
+
+Con Madrid Soft Play, alquilas tranquilidad total.
+
+Pregunta 3:
+Pregunta: ¿En qué se diferencia el soft play de un castillo hinchable?
+Respuesta: La gran diferencia es la seguridad y la edad. Los castillos hinchables están pensados para niños más mayores (de 2 a 6 años o más). Nuestro soft play está diseñado para bebés de 0 a 4 años. Es un entorno controlado, a su escala, con espuma de alta densidad y 100% seguro para que puedan gatear, explorar y dar sus primeros pasos sin riesgo.
+
+Pregunta 4:
+Pregunta: Vivo en un piso en Madrid, ¿necesito mucho espacio para el soft play?
+Respuesta: ¡Para nada! Nuestros paquetes son modulares y muy versátiles. Funcionan perfectamente en pisos, salones o jardines pequeños. Como referencia, nuestro paquete estándar más popular suele requerir unos 3x3 metros, pero siempre podemos reconfigurar los módulos para adaptarnos perfectamente a tu espacio disponible.
+
+Pregunta 5:
+Pregunta: ¿Qué incluye exactamente el precio del alquiler? ¿Tengo que montarlo yo?
+Respuesta: El precio del alquiler incluye nuestro servicio completo de montaje y desmontaje. Nosotros nos encargamos de la instalación profesional para tu tranquilidad:
+
+• Montaje profesional antes de que lleguen los invitados.
+• Desmontaje completo y rápido al finalizar el evento.
+• El transporte NO está incluido y se cotiza por separado según la zona de entrega en Madrid.
+
+Tú no tienes que preocuparte por el montaje, solo de disfrutar la fiesta.
+
+Pregunta 6:
+Pregunta: ¿El soft play es solo diversión o aporta algo al desarrollo de mi bebé?
+Respuesta: ¡Es mucho más que diversión! Es una potente herramienta de estimulación temprana. Los diferentes módulos, texturas y la piscina de bolas están diseñados para fomentar:
+
+• Desarrollo motor grueso: Gatear, escalar, mejorar el equilibrio.
+• Desarrollo motor fino: Agarrar y soltar las bolas.
+• Desarrollo sensorial: Explorar colores y texturas.
+• Desarrollo cognitivo: Aprender la "permanencia del objeto" en la piscina de bolas.
+
+No solo alquilas un juego, inviertes en el desarrollo de tu hijo.
+
+Pregunta 7:
+Pregunta: ¿De qué materiales está hecho el equipo? ¿Son seguros si mi bebé lo muerde?
+Respuesta: Entendemos perfectamente esa preocupación. Todo nuestro equipo es de calidad profesional, fabricado con espuma de alta densidad y recubierto de vinipiel lavable. Es el mismo material que se usa en guarderías y centros de estimulación. Es suave, resistente, no tóxico y completamente seguro para bebés que están en la etapa de explorarlo todo con la boca.
+
+Pregunta 8:
+Pregunta: ¿Dónde puedo instalar el parque de soft play? ¿Solo en interiores?
+Respuesta: ¡Donde tú celebres el evento! Montamos nuestros parques en casas particulares, pisos, jardines, parques (con los permisos correspondientes), restaurantes, hoteles o cualquier local de eventos en la Comunidad de Madrid. Nos adaptamos a superficies interiores y exteriores.
+
+Pregunta 9:
+Pregunta: ¿Cuánto tardan en montar y desmontar el equipo el día de la fiesta?
+Respuesta: Somos muy eficientes para interrumpir lo mínimo posible. Generalmente, llegamos 1 hora antes del evento y el montaje nos toma unos 30-45 minutos. El desmontaje es igual de rápido.
+
+Pregunta 10:
+Pregunta: ¿Con cuánta antelación debo reservar mi soft play para un cumpleaños?
+Respuesta: Para asegurar la disponibilidad de tu paquete preferido, te recomendamos reservar con al menos 4 a 6 semanas de antelación, especialmente si tu evento es en temporada alta (primavera-verano).
+
+--- FOOTER ---
+Título: Madrid Soft Play
+Descripción: Plaza blanda a domicilio para bebés y niños pequeños en toda la Comunidad de Madrid.
+Copyright: Madrid Soft Play
+
